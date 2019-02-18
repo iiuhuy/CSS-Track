@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>CSS-Track</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+
+  <!-- 引入 prism 的 CSS & JS -->
+  <link href="themes/prism.css" rel="stylesheet" />
+  <link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css">
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+
 </head>
+
 <body>
   <!-- loading 提示 -->
-  <div data-app id="main">加载中...😊</div>
+  <!-- <div data-app id="main">加载中...😊</div> -->
+  <!-- <div id="app">加载中...😊</div> -->
+  <div id="app"></div>
+
   <script>
     window.$docsify = {
-      // name: '',
-      // repo: ''
-      el: '#main'
+      name: 'CSS-Track',
+      repo: 'https://github.com/AlvinMi/CSS-Track',
+      // el: '#main',
+      loadSidebar: true,
+      // subMaxLevel: 2,
+      // alias: {
+      //   '/.*/_sidebar.md': '/_sidebar.md'
+      // }
+
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
+  <script src="prism.js"></script>
+  <script src="//unpkg.com/vue/dist/vue.min.js"></script>
+  <script src="//unpkg.com/vuep/dist/vuep.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.15.0/components/prism-scss.min.js"></script>
+  <script src="//unpkg.com/prismjs@1.15.0/components/prism-pug.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+
 </body>
+
 </html>
