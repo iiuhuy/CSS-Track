@@ -7,7 +7,7 @@ const gitalk = new Gitalk({
   admin: ['AlvinMi'],
   distractionFreeMode: true,
   id: md5(window.location.hash)   //页面的唯一标识，gitalk 会根据这个标识自动创建的 issue 的标签,我们使用页面的相对路径作为标识
-})
+});
 
 window.gitalk = gitalk;
 
