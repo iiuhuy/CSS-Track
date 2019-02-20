@@ -8,4 +8,5 @@
 ## layout
 
 - [Flexbox](./layout/Flexbox.md)
+- [Two-column-layout](./layout/Two-column-layout.md)
 - [test](./layout/test.md)

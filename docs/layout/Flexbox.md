@@ -36,16 +36,29 @@
 
 文档流的概念：可以想象成流动的水，文档流便是指从上到下，从左往右的文档布局。当给元素的 position 属性设置 absolute、fixed 时便会脱离文档流，不再遵循从上到下，从左到右的的规律了。
 
-##
+## float
+
+float 属性定义元素在哪个方向浮动，常用的属性值有 `left`、`right`，即向左浮动，向右浮动。设置 float 会脱离文档流。当不给父元素设置宽高时，父元素的宽高会被子元素的内容撑开。但是当子元素设置浮动属性后，子元素会溢出到父元素外，父元素高度也不会被撑开了，称为 「高度塌陷」。
+
+如何解决这个问题？ **要使用清除浮动。** 常用解决方案如下：
+
+- 1.通过添加额外的标签，利用 clear 属性来清除浮动;
+- 2.使用 `br` 标签。(br 自带 clear 属性，clear 属性有 left、right 和 all 三个属性值可选。);
+- 3.给父元素设置 overflow;
+- 4.使用 after 伪元素 ;
+
+在实践的时候为什么仅仅设置 `overflow: hidden;` 就能清除浮动呢？
+
+这里需要学习 [BFC](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context) (Block Formatting Context)，块级格式化上下文。BFC 的一个特性便是可以包含浮动元素，设置 overflow 为 hidden 满足了创建一个 BFC 的条件，其实就是创建 BFC，利用 BFC 固有特性清除浮动。
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="FlexBox" src="//codepen.io/alvinmi/embed/aXXgWY/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/alvinmi/pen/aXXgWY/'>FlexBox</a> by YuHui
   (<a href='https://codepen.io/alvinmi'>@alvinmi</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-
 ## 参考资料
 
 - 前端九部 - 入门者手册 2019：https://www.yuque.com/fe9/basic
 - 阮一峰 - FlexBox 布局的最简单表单：http://www.ruanyifeng.com/blog/2018/10/flexbox-form.html
 - 可替代元素：https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element
+- https://www.cnblogs.com/winter-cn/archive/2013/05/11/3072929.html
