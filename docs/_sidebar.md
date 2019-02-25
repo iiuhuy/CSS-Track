@@ -10,10 +10,14 @@
 - [Flexbox](./layout/Flexbox.md)
 - [Two-column-layout](./layout/Two-Column-layout.md)
 - [Three-Columns-layout](./layout/Three-Columns-layout.md)
-- [test](./layout/test.md)
+<!-- - [test](./layout/test.md) -->
+
+## Drop Shadows: box-shadow 
 
 ## logo
 
+- [QQ_logo](./logo/QQ_logo.md)
+
+
 ## transition & animation
 
-- 

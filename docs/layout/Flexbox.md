@@ -56,6 +56,110 @@ float 属性定义元素在哪个方向浮动，常用的属性值有 `left`、`
   (<a href='https://codepen.io/alvinmi'>@alvinmi</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+## 使用 Flex 实现三栏布局
+
+使用 Flex 布局该如何实现三栏布局呢？
+
+先来最简单的基础代码:
+
+```html
+<div class="container">
+  <div class="center">center</div>
+  <div class="left">left</div>
+  <div class="right">right</div>
+</div>
+```
+
+```css
+.center {
+  height: 150px;
+  background-color: #94e8ff;
+}
+
+.left {
+  width: 100px;
+  height: 150px;
+  background-color: #ffb5bf;
+}
+
+.right {
+  width: 200px;
+  height: 150px;
+  background-color: #8990d5;
+}
+/* 将容器设置为 Flex 布局 */
+.container {
+  display: flex;
+}
+```
+
+这个时候需要解决的是，如何将 .left 排列在最左边，如何将 .center 沾满空间。
+
+- order 属性可以改变项目的排列顺序
+- flex-grow 可以定义项目的放大比例
+
+```css
+.left {
+  order: -1;
+}
+
+.center {
+  flex-grow: 1; /* flex: 1; 也行 */
+}
+```
+
+如下：
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Flex-三栏布局" src="//codepen.io/alvinmi/embed/jJOEgP/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/alvinmi/pen/jJOEgP/'>Flex-三栏布局</a> by YuHui
+  (<a href='https://codepen.io/alvinmi'>@alvinmi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+如果遇到**居中问题**呢？
+
+当子元素的高度不确定时，处理垂直居中就比较麻烦，但是使用 Flex 布局中容器有关对齐方式的属性便能快速解决，以下代码子元素在父元素中是水平、垂直居中的。
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+### 浏览器的兼容性
+
+设置为 Flex 布局后，子元素的 float、clear、vertical-align 属性都将失效。
+
+到目前为止，Flex 布局有一下几种写法：
+
+```css
+display: box; /* 2009 version 老语法 */
+display: flexbox; /* 2011 version 过渡语法 */
+display: flex | inline-flex; /* 2012 version 新语法 */
+```
+
+在 [Can I Use](https://caniuse.com/#search=flex) 上可以看到目前 Flex 布局对浏览器的支持情况。
+
+更低的版本需要加上前缀进行支持，不同版本所在时期不同也会导致属性值不同，推荐的兼容性写法：
+
+```css
+.page-wrap {
+  display: -webkit-box;   /* 老语法 iOS 6-, Safari 3.1-6 */
+  display: -moz-box;      /* 老语法 Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;   /* 过渡语法 IE 10 */
+  display: -webkit-flex;  /* 新语法 Chrome */
+  display: flex;          /* 新语法, Spec - Opera 12.1, Firefox 20+ */
+}
+```
+
+Flex 需要掌握的点:
+
+- Flex 布局中容器、项目，主轴、交叉轴及它们的开始位置，结束位置的含义；
+- 容器的六个属性及它们属性值的含义和用法：flex-direction、flex-wrap、flex-flow、justify-content、align-items、align-conten；
+- 项目的六个属性及它们属性值的含义和用法：order、flex-grow、flex-shrink、flex-basis、flex、align-self；
+- Flex 布局在不同版本浏览器中的兼容性问题。
+
 ## 参考资料
 
 - 前端九部 - 入门者手册 2019：https://www.yuque.com/fe9/basic

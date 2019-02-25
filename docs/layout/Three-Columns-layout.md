@@ -141,7 +141,19 @@ body {
 
 圣杯布局是设置了父元素的 padding 留出空间，之后利用 relative 来归位。双飞翼则是多加了一个 div，将中间自适应部分包裹起来，利用子 div 的 margin 来给左右元素留空间。
 
+同样的问题，双飞翼布局通过多加一个 div 并使用了 margin 来实现，圣杯布局则是使用 padding、相对定位（relative）、设置偏移量（left、right）来实现，相对来说，双飞翼布局更容易理解。在圣杯布局中，无限缩小屏幕（假设没有设置 body 的最小宽度），当 .main 的宽度小于 .left 时，会出现布局错乱。
 
+<iframe height="265" style="width: 100%;" scrolling="no" title="双飞翼布局" src="//codepen.io/alvinmi/embed/RvzWjM/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/alvinmi/pen/RvzWjM/'>双飞翼布局</a> by YuHui
+  (<a href='https://codepen.io/alvinmi'>@alvinmi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## 3.Flex 布局
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Flex-三栏布局" src="//codepen.io/alvinmi/embed/jJOEgP/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/alvinmi/pen/jJOEgP/'>Flex-三栏布局</a> by YuHui
+  (<a href='https://codepen.io/alvinmi'>@alvinmi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## 参考
 
@@ -149,6 +161,8 @@ body {
 - 双飞翼布局介绍-始于淘宝 UED：http://www.imooc.com/wenda/detail/254035
 - 圣杯布局&双飞翼布局的对比：http://www.cnblogs.com/tinyphp/p/4743674.html
 - [我熟知的三种三栏网页宽度自适应布局方法](https://www.zhangxinxu.com/wordpress/2009/11/%E6%88%91%E7%86%9F%E7%9F%A5%E7%9A%84%E4%B8%89%E7%A7%8D%E4%B8%89%E6%A0%8F%E7%BD%91%E9%A1%B5%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95/)
+- [CSS 布局：40 个教程、技巧、例子和最佳实践](https://coolshell.cn/articles/6840.html)
+
 
 ```
 
