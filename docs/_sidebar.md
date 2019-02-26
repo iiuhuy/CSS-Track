@@ -14,9 +14,12 @@
 
 ## Drop Shadows: box-shadow 
 
+- [Box-shadow 实现圆环进度条动画]()
+
 ## logo
 
-- [QQ_logo](./logo/QQ_logo.md)
+- [QQ_Logo](./logo/QQ_Logo.md)
+- [IE_Logo](./logo/IE_Logo.md)
 
 
 ## transition & animation
