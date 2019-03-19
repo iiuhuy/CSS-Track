@@ -13,14 +13,14 @@
 - [Three-Columns-layout](./layout/Three-Columns-layout.md)
   <!-- - [test](./layout/test.md) -->
 
+## logo
+
+- [IE_Logo](./logo/IE_Logo.md)
+- [QQ_Logo](./logo/QQ_Logo.md)
+
 ## Drop Shadows: box-shadow
 
 - [Box-shadow 实现圆环进度条动画]()
-
-## logo
-
-- [QQ_Logo](./logo/QQ_Logo.md)
-- [IE_Logo](./logo/IE_Logo.md)
 
 ## transition & animation
 
@@ -30,7 +30,7 @@
 
 ## svg
 
-- [Svg](./svg/READMD.md)
+- [Svg](./svg/README.md)
 
 ## three.js
 
