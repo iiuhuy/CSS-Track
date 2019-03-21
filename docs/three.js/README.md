@@ -1,5 +1,8 @@
 # Three.js 
 
+<img src="https://raw.githubusercontent.com/AlvinMi/2019-Pic/master/2019/20190320101610.png"/>
+
+
 ## 三大组件 
 
 - 相机(Camera)
