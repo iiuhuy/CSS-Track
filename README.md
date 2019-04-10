@@ -12,3 +12,12 @@
 
 ## 动画/过渡(transition/animation)
 
+
+
+## usage
+
+本地运行：
+
+```zsh
+$ docsify serve docs
+```
