@@ -106,6 +106,12 @@ circle {
 - 3D 数学知识，向量，矩阵之间的表示和运算。在 WebGL 中顶点位置的 坐标系转换、光照效果等等；
 - 图形学知识。
 
+在 canvas 中画一个圆：
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Canvas-Rectangle" src="//codepen.io/alvinmi/embed/bJqKoq/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/alvinmi/pen/bJqKoq/'>Canvas-Rectangle</a> by YuHui
+  (<a href='https://codepen.io/alvinmi'>@alvinmi</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 例如在 WebGL 中画一个矩形：
 
