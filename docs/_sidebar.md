@@ -24,6 +24,10 @@
 
 ## transition & animation
 
+## Art
+
+- [Art](./art/README.md)
+
 ## Canvas
 
 - [Canvas](./canvas/README.md)
